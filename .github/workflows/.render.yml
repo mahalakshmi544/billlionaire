@@ -1,0 +1,9 @@
+services:
+- type: web
+name: my-flask-app
+env: python
+plan: free
+branch: main
+buildcommand: "pipi install -r requirements.txt"
+startcommand: "gunicorn app:app"
+autoDeploy: false
